@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.rules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: #333;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  padding: 3rem 1rem;
+  width: 300px;
+  height: 300px;
+}
+.rules .rules-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: red;
+  /* padding: 0.3rem; */
+}
+
+#canvas {
+  border: 1px solid red;
+}
