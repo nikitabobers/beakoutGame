@@ -1,42 +1,92 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
-  font-family: sans-serif;
+    font-family: sans-serif;
+    background: #555;
+    overflow: hidden;
 }
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+h1 {
+    margin-bottom: 2rem;
 }
 .rules {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background: #333;
-  color: #fff;
-  position: absolute;
-  left: 0;
-  padding: 3rem 1rem;
-  width: 300px;
-  height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+    color: #fff;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    padding: 3rem 1rem;
+    width: 350px;
+    height: 400px;
+    border-radius: 20px;
+    transition: ease-in-out 1s all;
+    transform: translateX(-330px);
 }
-.rules .rules-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  border: none;
-  background: red;
-  /* padding: 0.3rem; */
+.open {
+    transition: ease-in-out 1s all;
+    transform: translateX(0%);
 }
 
+/* Hamburger menu icon */
+.rules .rules-btn {
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    right: -40px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    display: grid;
+    align-items: center;
+    grid-template-rows: repeat(3, 1fr);
+}
+.rules .rules-btn span {
+    display: block;
+    position: relative;
+    background: #fff;
+    height: 2.2px;
+    margin: 0px 0px 5px 0px;
+    z-index: 2;
+    transition: transform 0.2s;
+}
+.rules .rules-btn span:first-child,
+.rules .rules-btn span:last-child {
+    transform-origin: left center;
+}
+
+/* Change icon on clikc */
+.active span:first-child {
+    transform-origin: left center;
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+}
+.active span:nth-child(2) {
+    opacity: 0;
+}
+.active span:last-child {
+    transform-origin: left center;
+    transform: rotate(-45deg);
+    top: 0;
+    left: 0;
+}
 #canvas {
-  border: 1px solid red;
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #333;
 }

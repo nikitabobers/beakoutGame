@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>BreakOut Game</h1>
-      <!-- <div class="rules">
-        <button class="rules-btn">X</button>
-        <h2>How to play:</h2>
-        <p>Use arrow keys to move the paddle</p>
-      </div> -->
-      <canvas id="canvas" width="400" height="300"></canvas>
-    </div>
-    <script src="./script.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/0634e71a94.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>BreakOut Game</h1>
+            <div class="rules">
+                <button class="rules-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <h1>How to play:</h1>
+                <p>
+                    Use <i class="fas fa-caret-square-left fa-lg"></i> and
+                    <i class="fas fa-caret-square-right fa-lg"></i> keys to move the paddle
+                </p>
+            </div>
+            <canvas id="canvas" width="800" height="600"></canvas>
+        </div>
+        <script src="./script.js"></script>
+    </body>
 </html>
